@@ -13,6 +13,10 @@ conda env create -f environment.yml
 conda activate firstpackage-env
 ```
 
+### Note
+
+Because this project is dependent on the user pip installing the `src/` directory as a package, it's important to only create the environment from the project directory and not another location.
+
 ## Instructions on building a local package
 
 ### Step 1: Create `setup.py` file
