@@ -20,6 +20,6 @@ dependencies:
   - xz=5.2.4=h1de35cc_4
   - zlib=1.2.11=h1de35cc_3
   - pip:
-    - git+git@github.com:cenuno/making_python_package.git@5efbaa3a9c6ccddd79fa16a24c0bb8f3502b5e21#egg=src
+    - -e .
 prefix: /Users/cnuno/anaconda3/envs/firstpackage-env
 
