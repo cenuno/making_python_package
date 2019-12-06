@@ -1,6 +1,22 @@
 # Learning how to do relative imports
 
-## Step 1: Create `setup.py` file
+## `firstpackage-env` conda environment
+
+This project relies on you using the [`environment.yml`](environment.yml) file to recreate the `firstpackage-env` conda environment. To do so, please run the following commands:
+
+```bash
+# create the conda environment
+# note: this make take anywhere from 1-5 minutes
+conda env create -f environment.yml
+
+# activate the conda environment
+conda activate firstpackage-env
+```
+
+## Instructions on building a local package
+
+### Step 1: Create `setup.py` file
+
 Example `setup.py` file to put at the root of your repository for making your `src/` directory a package:
 
 ```python
@@ -13,9 +29,9 @@ setup(
 )
 ```
 
-## Step 2. Create an empty file labeled as `__init__.py` inside of the `src/` directory
+### Step 2. Create an empty file labeled as `__init__.py` inside of the `src/` directory
 
-## Step 3. Just once, you will need to `pip install` your `src/` as a package:
+### Step 3. Just once, you will need to `pip install` your `src/` as a package:
 
 Run the following from your root project directory in the Terminal/Command Line:
 
@@ -28,13 +44,16 @@ pip install -e .
 
 ```
 .
+├── LICENSE
 ├── README.md
+├── environment.yml
 ├── notebooks
 │   ├── README.md
 │   ├── exploratory
 │   │   └── README.md
 │   └── report
-│       └── README.md
+│       ├── README.md
+│       └── final.ipynb
 ├── setup.py
 └── src
     ├── README.md
