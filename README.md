@@ -11,6 +11,9 @@ conda env create -f environment.yml
 
 # activate the conda environment
 conda activate firstpackage-env
+
+# make this conda environment available as a kernel in jupyter
+python -m ipykernel install --user --name firstpackage-env --display-name "firstpackage-env"
 ```
 
 ### Note
