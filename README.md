@@ -44,6 +44,22 @@ Run the following from your root project directory in the Terminal/Command Line:
 pip install -e .
 ```
 
+### Step 4. Manually edit the `environment.yml` file to include instructions on how to `pip` install the `src` package
+
+Unfortunately, the following bash command:
+
+```bash
+conda env export > environment.yml
+```
+does not export both `conda` and `pip` requirements in the `conda` environment.
+Instead, you will have to manually add the `pip` installation of the `src` package like so:
+
+```yml
+# add this at the end of all conda installs and before the prefix
+  - pip:
+    - -e .
+```
+
 ## Overview of directory structure
 
 ```
